@@ -6,8 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 class DestinyTest extends BaseNumerologyComputerTest {
 
+    private final Destiny destiny;
+
     @Autowired
-    private Destiny destiny;
+    DestinyTest(Destiny destiny) {
+        this.destiny = destiny;
+    }
 
     @Test
     void givenPerson_whenComputeTheDestiny_thenReturnsTheNumber() {

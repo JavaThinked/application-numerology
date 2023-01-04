@@ -5,8 +5,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 class PersonalYearTest extends BaseNumerologyComputerTest {
 
+    private final PersonalYear personalYear;
+
     @Autowired
-    private PersonalYear personalYear;
+    PersonalYearTest(PersonalYear personalYear) {
+        this.personalYear = personalYear;
+    }
 
     @Test
     void givenPerson_whenComputeThePersonalYear_thenReturnsTheNumber() {

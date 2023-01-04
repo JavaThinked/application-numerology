@@ -105,7 +105,7 @@ public class NumerologyController {
             var firstPerson = mapper.performMapping(firstPersonDto, Person.class);
             var secondPerson = mapper.performMapping(secondPersonDto, Person.class);
             var finalResultDto = mapper.performMapping((service).getFinalResult(firstPerson, secondPerson), FinalResultDto.class);
-            var response = createResponseWithStatusOKForFinalResult(FINAL_RESULT, finalResultDto);
+            var response = createResponseWithStatusOKForFinalResult(finalResultDto);
             return ResponseEntity.status(HttpStatus.OK).body(response);
         } catch (NumerologyValidationException exception) {
             throw new BadRequestException(String.format(BAD_REQUEST_MESSAGE, FINAL_RESULT.getDescription()), exception);
@@ -135,11 +135,11 @@ public class NumerologyController {
                 resultDto);
     }
 
-    private Response createResponseWithStatusOKForFinalResult(NumerologyValue.Category category, FinalResultDto finalResultDto) {
+    private Response createResponseWithStatusOKForFinalResult(FinalResultDto finalResultDto) {
         return new Response(HttpStatus.OK.value(),
                 HttpStatus.OK.getReasonPhrase(),
                 LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME),
-                category.getDescription(),
+                FINAL_RESULT.getDescription(),
                 finalResultDto);
     }
 }

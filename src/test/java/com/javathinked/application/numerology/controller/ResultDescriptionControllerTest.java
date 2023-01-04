@@ -7,7 +7,6 @@ import com.javathinked.application.numerology.service.core.NumerologyValue;
 import com.javathinked.application.numerology.service.exception.NumerologyCustomException;
 import com.javathinked.application.numerology.service.exception.NumerologyResultNotFoundException;
 import com.javathinked.application.numerology.service.model.ResultDescription;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -29,11 +28,6 @@ class ResultDescriptionControllerTest extends BaseControllerTest {
     private ResultDescriptionService service;
     private ResultDescriptionDto resultDescriptionDto;
     private ResultDescription resultDescription;
-
-    @BeforeEach
-    void setUp() {
-
-    }
 
     @Test
     void givenController_whenFindingResultDescriptionsByLanguage_thenReturnResultWithStatus_200() throws Exception {
@@ -79,7 +73,7 @@ class ResultDescriptionControllerTest extends BaseControllerTest {
     void givenController_whenFindingResultDescriptionByCategoryAndLanguage_thenReturnResultWithStatus_200() throws Exception {
         when(service.findResultDescriptionsByLanguage(anyString())).thenReturn(TestData.getSampleResultDescriptions());
 
-        mockMvc.perform(get(TestData.API_V1_BASE_URL + "/description/{category}/{language}", NumerologyValue.Category.DESTINY.getCategory(), NumerologyValue.Language.ENGLISH.getValue())
+        mockMvc.perform(get(TestData.API_V1_BASE_URL + "/description/{category}/{language}", NumerologyValue.Category.DESTINY.getName(), NumerologyValue.Language.ENGLISH.getValue())
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpectAll(
                         status().isOk(),

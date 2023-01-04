@@ -4,9 +4,12 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 class PersonalityTest extends BaseNumerologyComputerTest {
+    private final Personality personality;
 
     @Autowired
-    private Personality personality;
+    PersonalityTest(Personality personality) {
+        this.personality = personality;
+    }
 
     @Test
     void givenPerson_whenComputeThePersonality_thenReturnsTheNumber() {
