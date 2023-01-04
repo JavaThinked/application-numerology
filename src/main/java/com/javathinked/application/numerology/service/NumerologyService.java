@@ -36,13 +36,13 @@ public class NumerologyService {
         Result result;
         if(category != LOVE_COMPATIBILITY) {
             doesModelIsValid(person[0]);
-            result = repository.findResultByCategoryAndNumberAndLanguage(category.getCategory(),
+            result = repository.findResultByCategoryAndNumberAndLanguage(category.getName(),
                     computerMap.get(category.getBeanName()).computeNumberFor(person[0]),
                     person[0].getLanguage());
         } else {
             doesModelIsValid(person[0]);
             doesModelIsValid(person[1]);
-            result = repository.findResultByCategoryAndNumberAndLanguage(category.getCategory(),
+            result = repository.findResultByCategoryAndNumberAndLanguage(category.getName(),
                     computerMap.get(category.getBeanName()).computeNumberFor(person[0], person[1]),
                     person[0].getLanguage());
         }

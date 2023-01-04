@@ -14,23 +14,27 @@ import static org.junit.jupiter.api.Assertions.assertAll;
 @ActiveProfiles("test")
 class FormulaRepositoryTest implements WithAssertions {
 
+    private final FormulaRepository repository;
+
     @Autowired
-    private FormulaRepository repository;
+    FormulaRepositoryTest(FormulaRepository repository) {
+        this.repository = repository;
+    }
 
     @Test
     void givenRepository_whenGetFormulas_thenReturnAll() {
         var formulas = repository.findAll();
         assertAll(
                 () -> assertThat(formulas).isNotEmpty(),
-                () -> assertThat(formulas).anyMatch(formula -> DESTINY.getCategory().equals(formula.getCategory())),
-                () -> assertThat(formulas).anyMatch(formula -> PERSONALITY.getCategory().equals(formula.getCategory())),
-                () -> assertThat(formulas).anyMatch(formula -> ATTITUDE.getCategory().equals(formula.getCategory())),
-                () -> assertThat(formulas).anyMatch(formula -> NumerologyValue.Category.CHARACTER.getCategory().equals(formula.getCategory())),
-                () -> assertThat(formulas).anyMatch(formula -> SOUL_URGE.getCategory().equals(formula.getCategory())),
-                () -> assertThat(formulas).anyMatch(formula -> HIDDEN_AGENDA.getCategory().equals(formula.getCategory())),
-                () -> assertThat(formulas).anyMatch(formula -> DIVINE_PURPOSE.getCategory().equals(formula.getCategory())),
-                () -> assertThat(formulas).anyMatch(formula -> PERSONAL_YEAR.getCategory().equals(formula.getCategory())),
-                () -> assertThat(formulas).anyMatch(formula -> LOVE_COMPATIBILITY.getCategory().equals(formula.getCategory()))
+                () -> assertThat(formulas).anyMatch(formula -> DESTINY.getName().equals(formula.getCategory())),
+                () -> assertThat(formulas).anyMatch(formula -> PERSONALITY.getName().equals(formula.getCategory())),
+                () -> assertThat(formulas).anyMatch(formula -> ATTITUDE.getName().equals(formula.getCategory())),
+                () -> assertThat(formulas).anyMatch(formula -> NumerologyValue.Category.CHARACTER.getName().equals(formula.getCategory())),
+                () -> assertThat(formulas).anyMatch(formula -> SOUL_URGE.getName().equals(formula.getCategory())),
+                () -> assertThat(formulas).anyMatch(formula -> HIDDEN_AGENDA.getName().equals(formula.getCategory())),
+                () -> assertThat(formulas).anyMatch(formula -> DIVINE_PURPOSE.getName().equals(formula.getCategory())),
+                () -> assertThat(formulas).anyMatch(formula -> PERSONAL_YEAR.getName().equals(formula.getCategory())),
+                () -> assertThat(formulas).anyMatch(formula -> LOVE_COMPATIBILITY.getName().equals(formula.getCategory()))
         );
     }
 

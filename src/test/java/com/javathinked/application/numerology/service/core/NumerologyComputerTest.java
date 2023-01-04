@@ -15,9 +15,13 @@ import static com.javathinked.application.numerology.service.core.NumerologyValu
 @SpringJUnitWebConfig(TestApplicationConfig.class)
 class NumerologyComputerTest implements WithAssertions {
 
-    @Autowired
-    private Destiny sampleComputer;
+    private final Destiny sampleComputer;
     protected Person person;
+
+    @Autowired
+    NumerologyComputerTest(Destiny sampleComputer) {
+        this.sampleComputer = sampleComputer;
+    }
 
     @BeforeEach
     void setUp() {

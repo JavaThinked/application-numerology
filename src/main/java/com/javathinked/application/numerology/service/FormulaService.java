@@ -18,9 +18,9 @@ public class FormulaService {
     }
 
     public Formula findFormulaByCategory(NumerologyValue.Category category) {
-        if(category.getCategory().isEmpty()) {
+        if(category.getName().isEmpty()) {
             throw new NumerologyCustomException("The category can't be empty");
         }
-        return repository.findByCategory(category.getCategory());
+        return repository.findByCategory(category.getName());
     }
 }

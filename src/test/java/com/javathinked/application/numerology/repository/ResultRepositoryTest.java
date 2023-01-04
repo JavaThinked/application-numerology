@@ -17,29 +17,33 @@ import static org.junit.jupiter.api.Assertions.assertAll;
 @ActiveProfiles("test")
 class ResultRepositoryTest implements WithAssertions {
 
+    private final ResultRepository repository;
+
     @Autowired
-    private ResultRepository repository;
+    ResultRepositoryTest(ResultRepository repository) {
+        this.repository = repository;
+    }
 
     @Test
     void givenRepository_whenGetNumerologyResult_thenReturnResults() {
         var results = repository.findAll();
         assertAll(
                 () -> assertThat(results).isNotEmpty(),
-                () -> assertThat(results).anyMatch(result -> DESTINY.getCategory().equals(result.getCategory())),
-                () -> assertThat(results).anyMatch(result -> PERSONALITY.getCategory().equals(result.getCategory())),
-                () -> assertThat(results).anyMatch(result -> ATTITUDE.getCategory().equals(result.getCategory())),
-                () -> assertThat(results).anyMatch(result -> NumerologyValue.Category.CHARACTER.getCategory().equals(result.getCategory())),
-                () -> assertThat(results).anyMatch(result -> SOUL_URGE.getCategory().equals(result.getCategory())),
-                () -> assertThat(results).anyMatch(result -> HIDDEN_AGENDA.getCategory().equals(result.getCategory())),
-                () -> assertThat(results).anyMatch(result -> DIVINE_PURPOSE.getCategory().equals(result.getCategory())),
-                () -> assertThat(results).anyMatch(result -> PERSONAL_YEAR.getCategory().equals(result.getCategory())),
-                () -> assertThat(results).anyMatch(result -> LOVE_COMPATIBILITY.getCategory().equals(result.getCategory()))
+                () -> assertThat(results).anyMatch(result -> DESTINY.getName().equals(result.getCategory())),
+                () -> assertThat(results).anyMatch(result -> PERSONALITY.getName().equals(result.getCategory())),
+                () -> assertThat(results).anyMatch(result -> ATTITUDE.getName().equals(result.getCategory())),
+                () -> assertThat(results).anyMatch(result -> NumerologyValue.Category.CHARACTER.getName().equals(result.getCategory())),
+                () -> assertThat(results).anyMatch(result -> SOUL_URGE.getName().equals(result.getCategory())),
+                () -> assertThat(results).anyMatch(result -> HIDDEN_AGENDA.getName().equals(result.getCategory())),
+                () -> assertThat(results).anyMatch(result -> DIVINE_PURPOSE.getName().equals(result.getCategory())),
+                () -> assertThat(results).anyMatch(result -> PERSONAL_YEAR.getName().equals(result.getCategory())),
+                () -> assertThat(results).anyMatch(result -> LOVE_COMPATIBILITY.getName().equals(result.getCategory()))
         );
     }
 
     @Test
     void givenPerson_whenComputeDestinyAndResultIsONE_thenReturnsResultInEnglish() {
-        var destiny = repository.findResultByCategoryAndNumberAndLanguage(DESTINY.getCategory(),
+        var destiny = repository.findResultByCategoryAndNumberAndLanguage(DESTINY.getName(),
                 ONE.getValue(),
                 ENGLISH.getValue());
 
@@ -52,7 +56,7 @@ class ResultRepositoryTest implements WithAssertions {
 
     @Test
     void givenPerson_whenComputeDestinyAndResultIsONE_thenReturnsResultInFrench() {
-        var destiny = repository.findResultByCategoryAndNumberAndLanguage(DESTINY.getCategory(),
+        var destiny = repository.findResultByCategoryAndNumberAndLanguage(DESTINY.getName(),
                 ONE.getValue(),
                 FRENCH.getValue());
 
@@ -65,7 +69,7 @@ class ResultRepositoryTest implements WithAssertions {
 
     @Test
     void givenPerson_whenComputePersonalityAndResultIsONE_thenReturnsResultInEnglish() {
-        var personality = repository.findResultByCategoryAndNumberAndLanguage(PERSONALITY.getCategory(),
+        var personality = repository.findResultByCategoryAndNumberAndLanguage(PERSONALITY.getName(),
                 ONE.getValue(),
                 ENGLISH.getValue());
 
@@ -78,7 +82,7 @@ class ResultRepositoryTest implements WithAssertions {
 
     @Test
     void givenPerson_whenComputePersonalityAndResultIsONE_thenReturnsResultInFrench() {
-        var personality = repository.findResultByCategoryAndNumberAndLanguage(PERSONALITY.getCategory(),
+        var personality = repository.findResultByCategoryAndNumberAndLanguage(PERSONALITY.getName(),
                 ONE.getValue(),
                 FRENCH.getValue());
 
@@ -91,7 +95,7 @@ class ResultRepositoryTest implements WithAssertions {
 
     @Test
     void givenPerson_whenComputeAttitudeAndResultIsONE_thenReturnsResultInEnglish() {
-        var personality = repository.findResultByCategoryAndNumberAndLanguage(ATTITUDE.getCategory(),
+        var personality = repository.findResultByCategoryAndNumberAndLanguage(ATTITUDE.getName(),
                 ONE.getValue(),
                 ENGLISH.getValue());
 
@@ -104,7 +108,7 @@ class ResultRepositoryTest implements WithAssertions {
 
     @Test
     void givenPerson_whenComputeAttitudeAndResultIsONE_thenReturnsResultInFrench() {
-        var personality = repository.findResultByCategoryAndNumberAndLanguage(ATTITUDE.getCategory(),
+        var personality = repository.findResultByCategoryAndNumberAndLanguage(ATTITUDE.getName(),
                 ONE.getValue(),
                 FRENCH.getValue());
 
@@ -117,7 +121,7 @@ class ResultRepositoryTest implements WithAssertions {
 
     @Test
     void givenPerson_whenComputeCharacterAndResultIsONE_thenReturnsResultInEnglish() {
-        var personality = repository.findResultByCategoryAndNumberAndLanguage(NumerologyValue.Category.CHARACTER.getCategory(),
+        var personality = repository.findResultByCategoryAndNumberAndLanguage(NumerologyValue.Category.CHARACTER.getName(),
                 ONE.getValue(),
                 ENGLISH.getValue());
 
@@ -130,7 +134,7 @@ class ResultRepositoryTest implements WithAssertions {
 
     @Test
     void givenPerson_whenComputeCharacterAndResultIsONE_thenReturnsResultInFrench() {
-        var personality = repository.findResultByCategoryAndNumberAndLanguage(NumerologyValue.Category.CHARACTER.getCategory(),
+        var personality = repository.findResultByCategoryAndNumberAndLanguage(NumerologyValue.Category.CHARACTER.getName(),
                 ONE.getValue(),
                 FRENCH.getValue());
 
@@ -143,7 +147,7 @@ class ResultRepositoryTest implements WithAssertions {
 
     @Test
     void givenPerson_whenComputeSoulUrgeAndResultIsONE_thenReturnsResultInEnglish() {
-        var personality = repository.findResultByCategoryAndNumberAndLanguage(SOUL_URGE.getCategory(),
+        var personality = repository.findResultByCategoryAndNumberAndLanguage(SOUL_URGE.getName(),
                 ONE.getValue(),
                 ENGLISH.getValue());
 
@@ -156,7 +160,7 @@ class ResultRepositoryTest implements WithAssertions {
 
     @Test
     void givenPerson_whenComputeSoulUrgeAndResultIsONE_thenReturnsResultInFrench() {
-        var personality = repository.findResultByCategoryAndNumberAndLanguage(SOUL_URGE.getCategory(),
+        var personality = repository.findResultByCategoryAndNumberAndLanguage(SOUL_URGE.getName(),
                 ONE.getValue(),
                 FRENCH.getValue());
 
@@ -169,7 +173,7 @@ class ResultRepositoryTest implements WithAssertions {
 
     @Test
     void givenPerson_whenComputeHiddenAgendaAndResultIsONE_thenReturnsResultInEnglish() {
-        var personality = repository.findResultByCategoryAndNumberAndLanguage(HIDDEN_AGENDA.getCategory(),
+        var personality = repository.findResultByCategoryAndNumberAndLanguage(HIDDEN_AGENDA.getName(),
                 ONE.getValue(),
                 ENGLISH.getValue());
 
@@ -182,7 +186,7 @@ class ResultRepositoryTest implements WithAssertions {
 
     @Test
     void givenPerson_whenComputeHiddenAgendaAndResultIsONE_thenReturnsResultInFrench() {
-        var personality = repository.findResultByCategoryAndNumberAndLanguage(HIDDEN_AGENDA.getCategory(),
+        var personality = repository.findResultByCategoryAndNumberAndLanguage(HIDDEN_AGENDA.getName(),
                 ONE.getValue(),
                 FRENCH.getValue());
 
@@ -195,7 +199,7 @@ class ResultRepositoryTest implements WithAssertions {
 
     @Test
     void givenPerson_whenComputeDivinePurposeAndResultIsONE_thenReturnsResultInEnglish() {
-        var personality = repository.findResultByCategoryAndNumberAndLanguage(DIVINE_PURPOSE.getCategory(),
+        var personality = repository.findResultByCategoryAndNumberAndLanguage(DIVINE_PURPOSE.getName(),
                 ONE.getValue(),
                 ENGLISH.getValue());
 
@@ -208,7 +212,7 @@ class ResultRepositoryTest implements WithAssertions {
 
     @Test
     void givenPerson_whenComputeDivinePurposeAndResultIsONE_thenReturnsResultInFrench() {
-        var personality = repository.findResultByCategoryAndNumberAndLanguage(DIVINE_PURPOSE.getCategory(),
+        var personality = repository.findResultByCategoryAndNumberAndLanguage(DIVINE_PURPOSE.getName(),
                 ONE.getValue(),
                 FRENCH.getValue());
 
@@ -221,7 +225,7 @@ class ResultRepositoryTest implements WithAssertions {
 
     @Test
     void givenPerson_whenComputePersonalYearAndResultIsONE_thenReturnsResultInEnglish() {
-        var personality = repository.findResultByCategoryAndNumberAndLanguage(PERSONAL_YEAR.getCategory(),
+        var personality = repository.findResultByCategoryAndNumberAndLanguage(PERSONAL_YEAR.getName(),
                 ONE.getValue(),
                 ENGLISH.getValue());
 
@@ -234,7 +238,7 @@ class ResultRepositoryTest implements WithAssertions {
 
     @Test
     void givenPerson_whenComputePersonalYearAndResultIsONE_thenReturnsResultInFrench() {
-        var personality = repository.findResultByCategoryAndNumberAndLanguage(PERSONAL_YEAR.getCategory(),
+        var personality = repository.findResultByCategoryAndNumberAndLanguage(PERSONAL_YEAR.getName(),
                 ONE.getValue(),
                 FRENCH.getValue());
 
@@ -247,7 +251,7 @@ class ResultRepositoryTest implements WithAssertions {
 
     @Test
     void givenPerson_whenComputeLoveCompatibilityAndResultIsONE_thenReturnsResultInEnglish() {
-        var personality = repository.findResultByCategoryAndNumberAndLanguage(LOVE_COMPATIBILITY.getCategory(),
+        var personality = repository.findResultByCategoryAndNumberAndLanguage(LOVE_COMPATIBILITY.getName(),
                 ONE.getValue(),
                 ENGLISH.getValue());
 
@@ -260,7 +264,7 @@ class ResultRepositoryTest implements WithAssertions {
 
     @Test
     void givenPerson_whenComputeLoveCompatibilityAndResultIsONE_thenReturnsResultInFrench() {
-        var personality = repository.findResultByCategoryAndNumberAndLanguage(LOVE_COMPATIBILITY.getCategory(),
+        var personality = repository.findResultByCategoryAndNumberAndLanguage(LOVE_COMPATIBILITY.getName(),
                 ONE.getValue(),
                 FRENCH.getValue());
 

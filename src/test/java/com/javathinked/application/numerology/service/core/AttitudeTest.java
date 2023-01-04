@@ -5,8 +5,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 class AttitudeTest extends BaseNumerologyComputerTest {
 
+    private final Attitude attitude;
+
     @Autowired
-    private Attitude attitude;
+    AttitudeTest(Attitude attitude) {
+        this.attitude = attitude;
+    }
 
     @Test
     void givenPerson_whenComputeTheAttitude_thenReturnsTheNumber() {

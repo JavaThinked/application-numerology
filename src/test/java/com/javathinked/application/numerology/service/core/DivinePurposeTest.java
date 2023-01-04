@@ -5,8 +5,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 class DivinePurposeTest extends BaseNumerologyComputerTest {
 
+    private final DivinePurpose divinePurpose;
+
     @Autowired
-    private DivinePurpose divinePurpose;
+    DivinePurposeTest(DivinePurpose divinePurpose) {
+        this.divinePurpose = divinePurpose;
+    }
 
     @Test
     void givenPerson_whenComputeTheDivinePurpose_thenReturnsTheNumber() {

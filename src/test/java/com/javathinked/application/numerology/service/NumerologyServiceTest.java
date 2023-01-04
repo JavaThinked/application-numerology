@@ -62,7 +62,7 @@ class NumerologyServiceTest implements WithAssertions {
         var result = underTest.computeNumber(category, person);
         assertAll(
                 () -> assertThat(result.getNumber()).isEqualTo(ONE.getValue()),
-                () -> assertThat(result.getCategory()).isEqualTo(category.getCategory()),
+                () -> assertThat(result.getCategory()).isEqualTo(category.getName()),
                 () -> assertThat(result.getMessage()).contains(message),
                 () -> assertThat(result.getLanguage()).isEqualTo(ENGLISH.getValue())
         );
@@ -76,7 +76,7 @@ class NumerologyServiceTest implements WithAssertions {
         var result = underTest.computeNumber(LOVE_COMPATIBILITY, person, person);
         assertAll(
                 () -> assertThat(result.getNumber()).isEqualTo(ONE.getValue()),
-                () -> assertThat(result.getCategory()).isEqualTo(LOVE_COMPATIBILITY.getCategory()),
+                () -> assertThat(result.getCategory()).isEqualTo(LOVE_COMPATIBILITY.getName()),
                 () -> assertThat(result.getMessage()).contains("you would be most likely to aspire toward"),
                 () -> assertThat(result.getLanguage()).isEqualTo(ENGLISH.getValue())
         );
