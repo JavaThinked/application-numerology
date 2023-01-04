@@ -1,0 +1,391 @@
+{
+	"info": {
+		"_postman_id": "53f56e22-0da7-4af1-9fa7-c69bfb9c7316",
+		"name": "application-numerology",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15871510"
+	},
+	"item": [
+		{
+			"name": "core",
+			"item": [
+				{
+					"name": "destiny",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"JOHN\",\r\n    \"lastName\": \"DOE\",\r\n    \"day\": 3,\r\n    \"month\": 9,\r\n    \"year\": 1997,\r\n    \"phoneNumber\": \"460-555-4020\",\r\n    \"email\": \"john.doe@mail.com\",\r\n    \"language\": \"en\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/numerology/destiny",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"numerology",
+								"destiny"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "personality",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"JOHN\",\r\n    \"lastName\": \"DOE\",\r\n    \"day\": 3,\r\n    \"month\": 9,\r\n    \"year\": 1997,\r\n    \"phoneNumber\": \"460-555-4020\",\r\n    \"email\": \"john.doe@mail.com\",\r\n    \"language\": \"en\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/numerology/v1/compute/personality",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"numerology",
+								"v1",
+								"compute",
+								"personality"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "attitude",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"JOHN\",\r\n    \"lastName\": \"DOE\",\r\n    \"day\": 3,\r\n    \"month\": 9,\r\n    \"year\": 1997,\r\n    \"phoneNumber\": \"460-555-4020\",\r\n    \"email\": \"john.doe@mail.com\",\r\n    \"language\": \"en\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/numerology/attitude",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"numerology",
+								"attitude"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "character",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"JOHN\",\r\n    \"lastName\": \"DOE\",\r\n    \"day\": 3,\r\n    \"month\": 9,\r\n    \"year\": 1997,\r\n    \"phoneNumber\": \"460-555-4020\",\r\n    \"email\": \"john.doe@mail.com\",\r\n    \"language\": \"en\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/numerology/character",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"numerology",
+								"character"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "soul-urge",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"JOHN\",\r\n    \"lastName\": \"DOE\",\r\n    \"day\": 3,\r\n    \"month\": 9,\r\n    \"year\": 1997,\r\n    \"phoneNumber\": \"460-555-4020\",\r\n    \"email\": \"john.doe@mail.com\",\r\n    \"language\": \"en\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/numerology/soul-urge",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"numerology",
+								"soul-urge"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hidden-agenda",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"JOHN\",\r\n    \"lastName\": \"DOE\",\r\n    \"day\": 3,\r\n    \"month\": 9,\r\n    \"year\": 1997,\r\n    \"phoneNumber\": \"460-555-4020\",\r\n    \"email\": \"john.doe@mail.com\",\r\n    \"language\": \"en\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/numerology/hidden-agenda",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"numerology",
+								"hidden-agenda"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "divine-purpose",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"JOHN\",\r\n    \"lastName\": \"DOE\",\r\n    \"day\": 3,\r\n    \"month\": 9,\r\n    \"year\": 1997,\r\n    \"phoneNumber\": \"460-555-4020\",\r\n    \"email\": \"john.doe@mail.com\",\r\n    \"language\": \"en\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/numerology/divine-purpose",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"numerology",
+								"divine-purpose"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "personal-year",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"JOHN\",\r\n    \"lastName\": \"DOE\",\r\n    \"day\": 3,\r\n    \"month\": 9,\r\n    \"year\": 1997,\r\n    \"phoneNumber\": \"460-555-4020\",\r\n    \"email\": \"john.doe@mail.com\",\r\n    \"language\": \"en\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/numerology/personal-year",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"numerology",
+								"personal-year"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "divine-purpose",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"JOHN\",\r\n    \"lastName\": \"DOE\",\r\n    \"day\": 3,\r\n    \"month\": 9,\r\n    \"year\": 1997,\r\n    \"phoneNumber\": \"460-555-4020\",\r\n    \"email\": \"john.doe@mail.com\",\r\n    \"language\": \"en\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/numerology/divine-purpose",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"numerology",
+								"divine-purpose"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "love-compatibility",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\r\n    \"firstName\": \"JOHN\",\r\n    \"lastName\": \"DOE\",\r\n    \"day\": 3,\r\n    \"month\": 9,\r\n    \"year\": 1997,\r\n    \"phoneNumber\": \"460-555-4020\",\r\n    \"email\": \"emmanuel.email@mail.com\",\r\n    \"language\": \"en\"\r\n},\r\n{\r\n    \"firstName\": \"JEANNE\",\r\n    \"lastName\": \"DOEN\",\r\n    \"day\": 22,\r\n    \"month\": 7,\r\n    \"year\": 1994,\r\n    \"phoneNumber\": \"460-888-8545\",\r\n    \"email\": \"raissa.email@mail.com\",\r\n    \"language\": \"en\"\r\n}]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/numerology/love-compatibility",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"numerology",
+								"love-compatibility"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "final-result",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\r\n    \"firstName\": \"JOHN\",\r\n    \"lastName\": \"DOE\",\r\n    \"day\": 3,\r\n    \"month\": 9,\r\n    \"year\": 1997,\r\n    \"phoneNumber\": \"460-555-4020\",\r\n    \"email\": \"emmanuel.email@mail.com\",\r\n    \"language\": \"en\"\r\n},\r\n{\r\n    \"firstName\": \"JEANNE\",\r\n    \"lastName\": \"DOEN\",\r\n    \"day\": 22,\r\n    \"month\": 7,\r\n    \"year\": 1994,\r\n    \"phoneNumber\": \"460-888-8545\",\r\n    \"email\": \"raissa.email@mail.com\",\r\n    \"language\": \"en\"\r\n}]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/numerology/final-result",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"numerology",
+								"final-result"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "descriptions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/numerology/descriptions/en",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"numerology",
+						"descriptions",
+						"en"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "description",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/numerology/description/destiny/en",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"numerology",
+						"description",
+						"destiny",
+						"en"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
