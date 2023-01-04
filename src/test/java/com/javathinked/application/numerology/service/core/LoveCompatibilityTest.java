@@ -5,8 +5,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 class LoveCompatibilityTest extends BaseNumerologyComputerTest {
 
+    private final LoveCompatibility loveCompatibility;
+
     @Autowired
-    private LoveCompatibility loveCompatibility;
+    LoveCompatibilityTest(LoveCompatibility loveCompatibility) {
+        this.loveCompatibility = loveCompatibility;
+    }
 
     @Test
     void givenPerson_whenComputeTheLoveCompatibility_thenReturnsTheNumber() {

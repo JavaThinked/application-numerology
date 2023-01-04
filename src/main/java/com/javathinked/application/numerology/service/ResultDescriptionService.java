@@ -38,7 +38,7 @@ public class ResultDescriptionService {
             throw new NumerologyCustomException("The category or the language can't be empty");
         }
 
-        if(Arrays.stream(NumerologyValue.Category.values()).noneMatch(c -> c.getCategory().equals(category))) {
+        if(Arrays.stream(NumerologyValue.Category.values()).noneMatch(c -> c.getName().equals(category))) {
             throw new NumerologyCustomException(String.format("The category %s is not in the list", category));
         }
         var resultDescription = repository.findByCategoryAndLanguage(category, language);

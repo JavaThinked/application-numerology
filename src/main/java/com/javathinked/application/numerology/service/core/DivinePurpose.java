@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 @Service("DivinePurpose")
 public class DivinePurpose implements NumerologyComputer {
 
-    private Destiny destiny;
-    private Character character;
+    private final Destiny destiny;
+    private final Character character;
 
     @Autowired
     public DivinePurpose(Destiny destiny, Character character) {

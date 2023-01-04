@@ -5,8 +5,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 class HiddenAgendaTest extends BaseNumerologyComputerTest {
 
+    private final HiddenAgenda hiddenAgenda;
+
     @Autowired
-    private HiddenAgenda hiddenAgenda;
+    HiddenAgendaTest(HiddenAgenda hiddenAgenda) {
+        this.hiddenAgenda = hiddenAgenda;
+    }
 
     @Test
     void givenPerson_whenComputeTheHiddenAgenda_thenReturnsTheNumber() {

@@ -28,8 +28,8 @@ public class TestData {
     public static final int DAY = 3;
     public static final int MONTH = 9;
     public static final int YEAR = 1997;
-    private String API_VERSION_V1 = "/v1";
-    public String API_V1_BASE_URL = API_VERSION_V1 + "/numerology";
+    private final String API_VERSION_V1 = "/v1";
+    public final String API_V1_BASE_URL = API_VERSION_V1 + "/numerology";
 
     public PersonDto createPersonDto() {
         var personDto = new PersonDto();
@@ -63,55 +63,55 @@ public class TestData {
         var result = new Result();
         switch (category) {
             case DESTINY:
-                result.setCategory(DESTINY.getCategory());
+                result.setCategory(DESTINY.getName());
                 result.setNumber(1);
                 result.setMessage("This is the path of the risk-taker, the entrepreneur, the wholly independent trail-blazer.");
                 result.setLanguage(ENGLISH.getValue());
                 break;
             case PERSONALITY:
-                result.setCategory(PERSONALITY.getCategory());
+                result.setCategory(PERSONALITY.getName());
                 result.setNumber(1);
                 result.setMessage("You are dynamic, strong-willed and a natural leader, and your single-minded focus sets the stage for your success.");
                 result.setLanguage(ENGLISH.getValue());
                 break;
             case ATTITUDE:
-                result.setCategory(ATTITUDE.getCategory());
+                result.setCategory(ATTITUDE.getName());
                 result.setNumber(1);
                 result.setMessage("You are born with a strong will and independent nature. You prefer to make your own choices and are stubborn when pushed in a different direction.");
                 result.setLanguage(ENGLISH.getValue());
                 break;
             case CHARACTER:
-                result.setCategory(CHARACTER.getCategory());
+                result.setCategory(CHARACTER.getName());
                 result.setNumber(1);
                 result.setMessage("Possessing an original and innovative mind, with a steadfast focus on your goals qualifies you as a leader.");
                 result.setLanguage(ENGLISH.getValue());
                 break;
             case SOUL_URGE:
-                result.setCategory(SOUL_URGE.getCategory());
+                result.setCategory(SOUL_URGE.getName());
                 result.setNumber(1);
                 result.setMessage("Your Soul''s Urge is to be innovative, creative, and lead the masses to a higher realm of consciousness and understanding that engenders compassion for all.");
                 result.setLanguage(ENGLISH.getValue());
                 break;
             case HIDDEN_AGENDA:
-                result.setCategory(HIDDEN_AGENDA.getCategory());
+                result.setCategory(HIDDEN_AGENDA.getName());
                 result.setNumber(1);
                 result.setMessage("This agenda incites an innate desire to be independent, to lead, to innovate, and to create original and unique concepts and things.");
                 result.setLanguage(ENGLISH.getValue());
                 break;
             case DIVINE_PURPOSE:
-                result.setCategory(DIVINE_PURPOSE.getCategory());
+                result.setCategory(DIVINE_PURPOSE.getName());
                 result.setNumber(1);
                 result.setMessage("Your Divine Purpose is to leave behind a legacy of something you pioneered - a concept, a product, a foundation.");
                 result.setLanguage(ENGLISH.getValue());
                 break;
             case PERSONAL_YEAR:
-                result.setCategory(PERSONAL_YEAR.getCategory());
+                result.setCategory(PERSONAL_YEAR.getName());
                 result.setNumber(1);
                 result.setMessage("The number 1 puts you on the path to personal advancement. At work, you will start new projects. In love, you will meet a surprise. By investing money, you will make a profitable investment.");
                 result.setLanguage(ENGLISH.getValue());
                 break;
             case LOVE_COMPATIBILITY:
-                result.setCategory(LOVE_COMPATIBILITY.getCategory());
+                result.setCategory(LOVE_COMPATIBILITY.getName());
                 result.setNumber(1);
                 result.setMessage("This is the most influential number in relation to your personal motivations, what and who you like in your surroundings, and the career(s) you would be most likely to aspire toward.");
                 result.setLanguage(ENGLISH.getValue());
@@ -126,39 +126,39 @@ public class TestData {
         var formula = new Formula();
         switch (category) {
             case DESTINY:
-                formula.setCategory(DESTINY.getCategory());
+                formula.setCategory(DESTINY.getName());
                 formula.setExpression("Month + Day + Year");
                 break;
             case PERSONALITY:
-                formula.setCategory(PERSONALITY.getCategory());
+                formula.setCategory(PERSONALITY.getName());
                 formula.setExpression("Day");
                 break;
             case ATTITUDE:
-                formula.setCategory(ATTITUDE.getCategory());
+                formula.setCategory(ATTITUDE.getName());
                 formula.setExpression("Month + Day");
                 break;
             case CHARACTER:
-                formula.setCategory(CHARACTER.getCategory());
+                formula.setCategory(CHARACTER.getName());
                 formula.setExpression("Sum of Letters");
                 break;
             case SOUL_URGE:
-                formula.setCategory(SOUL_URGE.getCategory());
+                formula.setCategory(SOUL_URGE.getName());
                 formula.setExpression("Sum of Vowels");
                 break;
             case HIDDEN_AGENDA:
-                formula.setCategory(HIDDEN_AGENDA.getCategory());
+                formula.setCategory(HIDDEN_AGENDA.getName());
                 formula.setExpression("Sum of Consonants");
                 break;
             case DIVINE_PURPOSE:
-                formula.setCategory(DIVINE_PURPOSE.getCategory());
+                formula.setCategory(DIVINE_PURPOSE.getName());
                 formula.setExpression("Destiny + Character");
                 break;
             case PERSONAL_YEAR:
-                formula.setCategory(PERSONAL_YEAR.getCategory());
+                formula.setCategory(PERSONAL_YEAR.getName());
                 formula.setExpression("Month + Day + Current Year");
                 break;
             case LOVE_COMPATIBILITY:
-                formula.setCategory(LOVE_COMPATIBILITY.getCategory());
+                formula.setCategory(LOVE_COMPATIBILITY.getName());
                 formula.setExpression("Sum last names");
                 break;
             default:
@@ -172,39 +172,39 @@ public class TestData {
         resultDescription.setDescription(ENGLISH.getValue());
         switch (category) {
             case DESTINY:
-                resultDescription.setCategory(DESTINY.getCategory());
+                resultDescription.setCategory(DESTINY.getName());
                 resultDescription.setDescription("This is the most influential number in relation to your personal motivations, what and who you like in your surroundings, and the career(s) you would be most likely to aspire toward.");
                 break;
             case PERSONALITY:
-                resultDescription.setCategory(PERSONALITY.getCategory());
+                resultDescription.setCategory(PERSONALITY.getName());
                 resultDescription.setDescription("This number describes the behind-the-scenes or private you.");
                 break;
             case ATTITUDE:
-                resultDescription.setCategory(ATTITUDE.getCategory());
+                resultDescription.setCategory(ATTITUDE.getName());
                 resultDescription.setDescription("This number is most powerful in the first 30-35 years of your life and represents the how and why you react to circumstances in your youth.");
                 break;
             case CHARACTER:
-                resultDescription.setCategory(CHARACTER.getCategory());
+                resultDescription.setCategory(CHARACTER.getName());
                 resultDescription.setDescription("This number represents primarily your public and social qualities, but you would also exhibit much of the same in your personal relations, too.");
                 break;
             case SOUL_URGE:
-                resultDescription.setCategory(SOUL_URGE.getCategory());
+                resultDescription.setCategory(SOUL_URGE.getName());
                 resultDescription.setDescription("This influence presents a view of your intuitive, soulful self.");
                 break;
             case HIDDEN_AGENDA:
-                resultDescription.setCategory(HIDDEN_AGENDA.getCategory());
+                resultDescription.setCategory(HIDDEN_AGENDA.getName());
                 resultDescription.setDescription("This vibration offers your innate (hidden) desires.");
                 break;
             case DIVINE_PURPOSE:
-                resultDescription.setCategory(DIVINE_PURPOSE.getCategory());
+                resultDescription.setCategory(DIVINE_PURPOSE.getName());
                 resultDescription.setDescription("This is your farewell-performance number vibration. It is what your Soulful Self has chosen to achieve in your latter years of life.");
                 break;
             case PERSONAL_YEAR:
-                resultDescription.setCategory(PERSONAL_YEAR.getCategory());
+                resultDescription.setCategory(PERSONAL_YEAR.getName());
                 resultDescription.setDescription("This is about you should expect about the current year.");
                 break;
             case LOVE_COMPATIBILITY:
-                resultDescription.setCategory(LOVE_COMPATIBILITY.getCategory());
+                resultDescription.setCategory(LOVE_COMPATIBILITY.getName());
                 resultDescription.setDescription("This used to determine your love compatibility with another person.");
                 break;
             default:
@@ -218,39 +218,39 @@ public class TestData {
         resultDescriptionDto.setDescription(ENGLISH.getValue());
         switch (category) {
             case DESTINY:
-                resultDescriptionDto.setCategory(DESTINY.getCategory());
+                resultDescriptionDto.setCategory(DESTINY.getName());
                 resultDescriptionDto.setDescription("This is the most influential number in relation to your personal motivations, what and who you like in your surroundings, and the career(s) you would be most likely to aspire toward.");
                 break;
             case PERSONALITY:
-                resultDescriptionDto.setCategory(PERSONALITY.getCategory());
+                resultDescriptionDto.setCategory(PERSONALITY.getName());
                 resultDescriptionDto.setDescription("This number describes the behind-the-scenes or private you.");
                 break;
             case ATTITUDE:
-                resultDescriptionDto.setCategory(ATTITUDE.getCategory());
+                resultDescriptionDto.setCategory(ATTITUDE.getName());
                 resultDescriptionDto.setDescription("This number is most powerful in the first 30-35 years of your life and represents the how and why you react to circumstances in your youth.");
                 break;
             case CHARACTER:
-                resultDescriptionDto.setCategory(CHARACTER.getCategory());
+                resultDescriptionDto.setCategory(CHARACTER.getName());
                 resultDescriptionDto.setDescription("This number represents primarily your public and social qualities, but you would also exhibit much of the same in your personal relations, too.");
                 break;
             case SOUL_URGE:
-                resultDescriptionDto.setCategory(SOUL_URGE.getCategory());
+                resultDescriptionDto.setCategory(SOUL_URGE.getName());
                 resultDescriptionDto.setDescription("This influence presents a view of your intuitive, soulful self.");
                 break;
             case HIDDEN_AGENDA:
-                resultDescriptionDto.setCategory(HIDDEN_AGENDA.getCategory());
+                resultDescriptionDto.setCategory(HIDDEN_AGENDA.getName());
                 resultDescriptionDto.setDescription("This vibration offers your innate (hidden) desires.");
                 break;
             case DIVINE_PURPOSE:
-                resultDescriptionDto.setCategory(DIVINE_PURPOSE.getCategory());
+                resultDescriptionDto.setCategory(DIVINE_PURPOSE.getName());
                 resultDescriptionDto.setDescription("This is your farewell-performance number vibration. It is what your Soulful Self has chosen to achieve in your latter years of life.");
                 break;
             case PERSONAL_YEAR:
-                resultDescriptionDto.setCategory(PERSONAL_YEAR.getCategory());
+                resultDescriptionDto.setCategory(PERSONAL_YEAR.getName());
                 resultDescriptionDto.setDescription("This is about you should expect about the current year.");
                 break;
             case LOVE_COMPATIBILITY:
-                resultDescriptionDto.setCategory(LOVE_COMPATIBILITY.getCategory());
+                resultDescriptionDto.setCategory(LOVE_COMPATIBILITY.getName());
                 resultDescriptionDto.setDescription("This used to determine your love compatibility with another person.");
                 break;
             default:

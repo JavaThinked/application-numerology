@@ -5,8 +5,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 class SoulUrgeTest extends BaseNumerologyComputerTest {
 
+    private final SoulUrge soulUrge;
+
     @Autowired
-    private SoulUrge soulUrge;
+    SoulUrgeTest(SoulUrge soulUrge) {
+        this.soulUrge = soulUrge;
+    }
 
     @Test
     void givenPerson_whenComputeTheSoulUrge_thenReturnsTheNumber() {

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ModelMapperWrapper implements MapperWrapper {
 
-    private ModelMapper mapper;
+    private final ModelMapper mapper;
 
     public ModelMapperWrapper() {
         this.mapper = new ModelMapper();

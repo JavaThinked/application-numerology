@@ -25,19 +25,19 @@ public class NumerologyValue {
         LOVE_COMPATIBILITY("LoveCompatibility", "love_compatibility", "LOVE COMPATIBILITY"),
         FINAL_RESULT("FinalResult", "final_result", "FINAL RESULT");
 
-        private String category;
-        private String description;
+        private final String name;
+        private final String description;
 
-        private String beanName;
+        private final String beanName;
 
-        Category(String beanName, String category, String description) {
+        Category(String beanName, String name, String description) {
             this.beanName = beanName;
-            this.category = category;
+            this.name = name;
             this.description = description;
         }
 
-        public String getCategory() {
-            return this.category;
+        public String getName() {
+            return this.name;
         }
 
         public String getDescription() {
@@ -53,7 +53,7 @@ public class NumerologyValue {
         ENGLISH("en"),
         FRENCH("fr");
 
-        private String value;
+        private final String value;
 
         Language(String value) {
             this.value = value;
