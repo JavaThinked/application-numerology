@@ -1,6 +1,6 @@
 package com.javathinked.application.numerology.util;
 
-import com.javathinked.application.numerology.configuration.TestApplicationConfig;
+import com.javathinked.application.numerology.configuration.TestApplicationConfiguration;
 import com.javathinked.application.numerology.controller.dto.DummyModelDto;
 import com.javathinked.application.numerology.service.model.DummyModel;
 import org.assertj.core.api.WithAssertions;
@@ -10,7 +10,7 @@ import org.springframework.test.context.junit.jupiter.web.SpringJUnitWebConfig;
 
 import static org.junit.jupiter.api.Assertions.assertAll;
 
-@SpringJUnitWebConfig(TestApplicationConfig.class)
+@SpringJUnitWebConfig(TestApplicationConfiguration.class)
 class ModelMapperWrapperTest implements WithAssertions {
 
     private final MapperWrapper mapperWrapper;

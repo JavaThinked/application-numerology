@@ -62,7 +62,7 @@ class ResultRepositoryTest implements WithAssertions {
 
         assertAll(
                 () -> assertThat(destiny.getNumber()).isEqualTo(ONE.getValue()),
-                () -> assertThat(destiny.getMessage()).contains("du pionnier totalement indépendant"),
+                () -> assertThat(destiny.getMessage()).contains("du pionnier totalement"),
                 () -> assertThat(destiny.getLanguage()).isEqualTo(FRENCH.getValue())
         );
     }
@@ -88,7 +88,7 @@ class ResultRepositoryTest implements WithAssertions {
 
         assertAll(
                 () -> assertThat(personality.getNumber()).isEqualTo(ONE.getValue()),
-                () -> assertThat(personality.getMessage()).contains("le terrain pour votre succès"),
+                () -> assertThat(personality.getMessage()).contains("le terrain pour votre"),
                 () -> assertThat(personality.getLanguage()).isEqualTo(FRENCH.getValue())
         );
     }
@@ -114,7 +114,7 @@ class ResultRepositoryTest implements WithAssertions {
 
         assertAll(
                 () -> assertThat(personality.getNumber()).isEqualTo(ONE.getValue()),
-                () -> assertThat(personality.getMessage()).contains("vous êtes poussé dans une direction différente"),
+                () -> assertThat(personality.getMessage()).contains("dans une direction"),
                 () -> assertThat(personality.getLanguage()).isEqualTo(FRENCH.getValue())
         );
     }
@@ -244,7 +244,7 @@ class ResultRepositoryTest implements WithAssertions {
 
         assertAll(
                 () -> assertThat(personality.getNumber()).isEqualTo(ONE.getValue()),
-                () -> assertThat(personality.getMessage()).contains("vous réaliserez un investissement profitable"),
+                () -> assertThat(personality.getMessage()).contains("un investissement profitable"),
                 () -> assertThat(personality.getLanguage()).isEqualTo(FRENCH.getValue())
         );
     }

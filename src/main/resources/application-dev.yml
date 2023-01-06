@@ -1,9 +1,9 @@
 spring:
   datasource:
     driverClassName: org.h2.Driver
-    url: jdbc:h2:mem:numerologydbtest
+    url: jdbc:h2:mem:numerologydbdev
     userName: sa
-    password: password
+    password: passworddev
     console:
       enabled: true
       path: /h2-console
@@ -13,10 +13,10 @@ spring:
       ddl-auto: none
   sql:
     init:
-      mode: always
+    mode: always
 
 application:
   http:
     authentication:
-      header-name: X-API-KEY-TEST
-      api-key: X-API-KEY-VALUE-TEST
+      header-name: X-API-KEY
+      api-key: riv2698fHCNIGi2mSRsSS5kbBm2cunh2N35I5wxnR27X8Fi7peOKYrUXHspTMdjp

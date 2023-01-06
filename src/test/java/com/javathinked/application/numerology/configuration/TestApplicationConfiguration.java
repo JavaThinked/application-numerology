@@ -8,7 +8,7 @@ import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
 
 @TestConfiguration
-public class TestApplicationConfig {
+public class TestApplicationConfiguration {
 
     @Bean
     public MapperWrapper createModelMapperWrapper() {
@@ -58,5 +58,10 @@ public class TestApplicationConfig {
     @Bean
     public NumerologyComputer createLoveCompatibility() {
         return new LoveCompatibility();
+    }
+
+    @Bean
+    public ApiKeyProperties createApiKeyProperties() {
+        return new ApiKeyProperties();
     }
 }

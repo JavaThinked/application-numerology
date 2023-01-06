@@ -19,6 +19,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.security.test.context.support.WithMockUser;
 
 import java.util.stream.Stream;
 
@@ -49,6 +50,7 @@ class NumerologyControllerTest extends BaseControllerTest {
     @DisplayName("Parametrized test for Numerology Controller - Status 200")
     @ParameterizedTest(name = "#{index} - Parametrized test for {0}")
     @MethodSource("getControllerTestParameters")
+    @WithMockUser
     void givenController_whenComputeNumber_thenReturnResultWithStatus_200(NumerologyValue.Category category, String path, String message) throws Exception {
         var result = TestData.sampleResultOf(category);
         when(mapper.performMapping(personDto, Person.class)).thenReturn(person);
@@ -71,6 +73,7 @@ class NumerologyControllerTest extends BaseControllerTest {
     @DisplayName("Parametrized test for Numerology Controller - Status 400")
     @ParameterizedTest(name = "#{index} - Parametrized test for {0}")
     @MethodSource("getControllerTestParameters")
+    @WithMockUser
     void givenController_whenComputeNumberWithBadParameters_thenReturnResultWithStatus_400(NumerologyValue.Category category, String path) throws Exception {
         when(mapper.performMapping(personDto, Person.class)).thenReturn(person);
         when(service.computeNumber(category, person)).thenThrow(NumerologyValidationException.class);
@@ -89,6 +92,7 @@ class NumerologyControllerTest extends BaseControllerTest {
     @DisplayName("Parametrized test for Numerology Controller - Status 404")
     @ParameterizedTest(name = "#{index} - Parametrized test for {0}")
     @MethodSource("getControllerTestParameters")
+    @WithMockUser
     void givenController_whenComputeNumberAndResultNotFound_thenReturnResultWithStatus_404(NumerologyValue.Category category, String path) throws Exception {
         when(mapper.performMapping(personDto, Person.class)).thenReturn(person);
         when(service.computeNumber(category, person)).thenThrow(NumerologyResultNotFoundException.class);
@@ -118,6 +122,7 @@ class NumerologyControllerTest extends BaseControllerTest {
     }
 
     @Test
+    @WithMockUser
     void givenController_whenComputeLoveCompatibility_thenReturnResultWithStatus_200() throws Exception {
         var result = TestData.sampleResultOf(LOVE_COMPATIBILITY);
         when(mapper.performMapping(personDto, Person.class)).thenReturn(person);
@@ -139,6 +144,7 @@ class NumerologyControllerTest extends BaseControllerTest {
     }
 
     @Test
+    @WithMockUser
     void givenController_whenComputeLoveCompatibilityWithBadParameters_thenReturnResultWithStatus_400() throws Exception {
         when(mapper.performMapping(personDto, Person.class)).thenReturn(person);
         when(service.computeNumber(LOVE_COMPATIBILITY, person, person)).thenThrow(NumerologyValidationException.class);
@@ -156,6 +162,7 @@ class NumerologyControllerTest extends BaseControllerTest {
     }
 
     @Test
+    @WithMockUser
     void givenController_whenComputeLoveCompatibilityWithBadParameters_thenReturnResultWithStatus_404() throws Exception {
         when(mapper.performMapping(personDto, Person.class)).thenReturn(person);
         when(service.computeNumber(LOVE_COMPATIBILITY, person, person)).thenThrow(NumerologyResultNotFoundException.class);
