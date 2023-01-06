@@ -1,7 +1,6 @@
 package com.javathinked.application.numerology.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.javathinked.application.numerology.configuration.ApiKeyProperties;
 import com.javathinked.application.numerology.configuration.ApiSecurityConfiguration;
 import com.javathinked.application.numerology.configuration.TestApplicationConfiguration;
 import com.javathinked.application.numerology.util.MapperWrapper;

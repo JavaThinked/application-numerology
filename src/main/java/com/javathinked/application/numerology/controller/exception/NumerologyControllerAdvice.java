@@ -3,6 +3,7 @@ package com.javathinked.application.numerology.controller.exception;
 import com.javathinked.application.numerology.controller.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -18,13 +19,13 @@ public class NumerologyControllerAdvice {
     }
 
     @ExceptionHandler(NotFoundException.class)
-    public ResponseEntity<Response> handleResourceNotFoundException(NotFoundException exception) {
+    public ResponseEntity<Response> handleNotFoundException(NotFoundException exception) {
         return handleHttpException(HttpStatus.NOT_FOUND, exception);
     }
 
-    @ExceptionHandler(UnauthorizedException.class)
-    public ResponseEntity<Response> handleResourceNotFoundException(UnauthorizedException exception) {
-        return handleHttpException(HttpStatus.UNAUTHORIZED, exception);
+    @ExceptionHandler(BadCredentialsException.class)
+    public ResponseEntity<Response> handleBadCredentialsException(BadCredentialsException exception) {
+        return handleHttpException(HttpStatus.FORBIDDEN, exception);
     }
 
     private ResponseEntity<Response> handleHttpException(HttpStatus httpStatus, Exception exception) {
