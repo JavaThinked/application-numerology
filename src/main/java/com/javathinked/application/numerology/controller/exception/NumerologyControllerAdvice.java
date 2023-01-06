@@ -22,6 +22,11 @@ public class NumerologyControllerAdvice {
         return handleHttpException(HttpStatus.NOT_FOUND, exception);
     }
 
+    @ExceptionHandler(UnauthorizedException.class)
+    public ResponseEntity<Response> handleResourceNotFoundException(UnauthorizedException exception) {
+        return handleHttpException(HttpStatus.UNAUTHORIZED, exception);
+    }
+
     private ResponseEntity<Response> handleHttpException(HttpStatus httpStatus, Exception exception) {
         var error = new Response(httpStatus.value(),
                 httpStatus.getReasonPhrase(),

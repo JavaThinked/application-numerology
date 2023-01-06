@@ -1,6 +1,7 @@
 package com.javathinked.application.numerology.controller;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 public class Response {

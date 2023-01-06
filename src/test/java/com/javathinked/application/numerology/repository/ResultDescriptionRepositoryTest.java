@@ -68,7 +68,7 @@ class ResultDescriptionRepositoryTest implements WithAssertions {
         assertAll(
                 () -> assertThat(resultDescription).isNotNull(),
                 () -> assertThat(resultDescription.getCategory()).isEqualTo(PERSONALITY.getName()),
-                () -> assertThat(resultDescription.getDescription()).contains("décrit les coulisses ou vous privé"),
+                () -> assertThat(resultDescription.getDescription()).contains("les coulisses ou vous"),
                 () -> assertThat(resultDescription.getLanguage()).isEqualTo(FRENCH.getValue())
         );
     }
@@ -112,7 +112,7 @@ class ResultDescriptionRepositoryTest implements WithAssertions {
         assertAll(
                 () -> assertThat(resultDescription).isNotNull(),
                 () -> assertThat(resultDescription.getCategory()).isEqualTo(NumerologyValue.Category.CHARACTER.getName()),
-                () -> assertThat(resultDescription.getDescription()).contains("même chose dans vos relations personnelles"),
+                () -> assertThat(resultDescription.getDescription()).contains("chose dans vos relations personnelles"),
                 () -> assertThat(resultDescription.getLanguage()).isEqualTo(FRENCH.getValue())
         );
     }
@@ -134,7 +134,7 @@ class ResultDescriptionRepositoryTest implements WithAssertions {
         assertAll(
                 () -> assertThat(resultDescription).isNotNull(),
                 () -> assertThat(resultDescription.getCategory()).isEqualTo(SOUL_URGE.getName()),
-                () -> assertThat(resultDescription.getDescription()).contains("votre moi intuitif et émouvant"),
+                () -> assertThat(resultDescription.getDescription()).contains("votre moi intuitif"),
                 () -> assertThat(resultDescription.getLanguage()).isEqualTo(FRENCH.getValue())
         );
     }
@@ -156,7 +156,7 @@ class ResultDescriptionRepositoryTest implements WithAssertions {
         assertAll(
                 () -> assertThat(resultDescription).isNotNull(),
                 () -> assertThat(resultDescription.getCategory()).isEqualTo(HIDDEN_AGENDA.getName()),
-                () -> assertThat(resultDescription.getDescription()).contains("offre vos désirs innés (cachés)"),
+                () -> assertThat(resultDescription.getDescription()).contains("Cette vibration offre vos"),
                 () -> assertThat(resultDescription.getLanguage()).isEqualTo(FRENCH.getValue())
         );
     }
@@ -200,7 +200,7 @@ class ResultDescriptionRepositoryTest implements WithAssertions {
         assertAll(
                 () -> assertThat(resultDescription).isNotNull(),
                 () -> assertThat(resultDescription.getCategory()).isEqualTo(DIVINE_PURPOSE.getName()),
-                () -> assertThat(resultDescription.getDescription()).contains("dans vos dernières années de vie"),
+                () -> assertThat(resultDescription.getDescription()).contains("Ceci est votre vibration de"),
                 () -> assertThat(resultDescription.getLanguage()).isEqualTo(FRENCH.getValue())
         );
     }

@@ -34,6 +34,7 @@ class NumerologyControllerITest extends BaseIntegrationTest {
     void integrationTest_For_Numerology_Status_200(NumerologyValue.Category category, String path) {
         webTestClient.post()
                 .uri(url + path)
+                .header(apiKeyProperties.getHeaderName(), apiKeyProperties.getApiKey())
                 .accept(MediaType.APPLICATION_JSON)
                 .bodyValue(personDto)
                 .exchange()
@@ -67,6 +68,7 @@ class NumerologyControllerITest extends BaseIntegrationTest {
         personDto.setLastName("");
         webTestClient.post()
                 .uri(url + path)
+                .header(apiKeyProperties.getHeaderName(), apiKeyProperties.getApiKey())
                 .accept(MediaType.APPLICATION_JSON)
                 .bodyValue(personDto)
                 .exchange()
