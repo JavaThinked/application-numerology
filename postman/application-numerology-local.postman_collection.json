@@ -16,13 +16,13 @@
 							"type": "apikey",
 							"apikey": [
 								{
-									"key": "value",
-									"value": "riv2698fHCNIGi2mSRsSS5kbBm2cunh2N35I5wxnR27X8Fi7peOKYrUXHspTMdjp",
+									"key": "key",
+									"value": "X-API-KEY",
 									"type": "string"
 								},
 								{
-									"key": "key",
-									"value": "X-API-KEY",
+									"key": "value",
+									"value": "riv2698fHCNIGi2mSRsSS5kbBm2cunh2N35I5wxnR27X8Fi7peOKYrUXHspTMdjp",
 									"type": "string"
 								},
 								{
@@ -566,17 +566,35 @@
 				{
 					"name": "health",
 					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "riv2698fHCNIGi2mSRsSS5kbBm2cunh2N35I5wxnR27X8Fi7peOKYrUXHspTMdjp",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://application-numerology.herokuapp.com/health",
-							"protocol": "https",
+							"raw": "{{LOCALHOST}}/actuator/health",
 							"host": [
-								"application-numerology",
-								"herokuapp",
-								"com"
+								"{{LOCALHOST}}"
 							],
 							"path": [
+								"actuator",
 								"health"
 							]
 						}
@@ -586,18 +604,36 @@
 				{
 					"name": "info",
 					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "riv2698fHCNIGi2mSRsSS5kbBm2cunh2N35I5wxnR27X8Fi7peOKYrUXHspTMdjp",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://application-numerology.herokuapp.com/health",
-							"protocol": "https",
+							"raw": "{{LOCALHOST}}/actuator/info",
 							"host": [
-								"application-numerology",
-								"herokuapp",
-								"com"
+								"{{LOCALHOST}}"
 							],
 							"path": [
-								"health"
+								"actuator",
+								"info"
 							]
 						}
 					},
