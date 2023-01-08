@@ -1,6 +1,6 @@
 package com.javathinked.application.numerology.service.core;
 
-import com.javathinked.application.numerology.configuration.TestApplicationConfig;
+import com.javathinked.application.numerology.configuration.TestApplicationConfiguration;
 import com.javathinked.application.numerology.data.TestData;
 import com.javathinked.application.numerology.service.model.Person;
 import org.assertj.core.api.WithAssertions;
@@ -12,7 +12,7 @@ import org.springframework.test.context.junit.jupiter.web.SpringJUnitWebConfig;
 import static com.javathinked.application.numerology.service.core.NumerologyValue.Numbers.*;
 
 
-@SpringJUnitWebConfig(TestApplicationConfig.class)
+@SpringJUnitWebConfig(TestApplicationConfiguration.class)
 class NumerologyComputerTest implements WithAssertions {
 
     private final Destiny sampleComputer;

@@ -127,19 +127,15 @@ public class NumerologyController {
         }
     }
 
-    private Response createResponseWithStatusOK(NumerologyValue.Category category, ResultDto resultDto) {
+    private Response createResponseWithStatusOK(NumerologyValue.Category category, Object dtoObject) {
         return new Response(HttpStatus.OK.value(),
                 HttpStatus.OK.getReasonPhrase(),
                 LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME),
                 category.getDescription(),
-                resultDto);
+                dtoObject);
     }
 
-    private Response createResponseWithStatusOKForFinalResult(FinalResultDto finalResultDto) {
-        return new Response(HttpStatus.OK.value(),
-                HttpStatus.OK.getReasonPhrase(),
-                LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME),
-                FINAL_RESULT.getDescription(),
-                finalResultDto);
+    private Response createResponseWithStatusOKForFinalResult(Object finalDtoObject) {
+        return createResponseWithStatusOK(FINAL_RESULT, finalDtoObject);
     }
 }

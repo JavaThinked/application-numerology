@@ -1,6 +1,7 @@
 package com.javathinked.application.numerology.it;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.javathinked.application.numerology.configuration.ApiKeyProperties;
 import com.javathinked.application.numerology.data.TestData;
 import org.assertj.core.api.WithAssertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -24,6 +25,9 @@ abstract class BaseIntegrationTest implements WithAssertions {
 
     @Autowired
     protected WebTestClient webTestClient;
+
+    @Autowired
+    protected ApiKeyProperties apiKeyProperties;
 
     @BeforeEach
     void setUp() {

@@ -1,16 +1,18 @@
 spring:
-  datasource:
-    driverClassName: org.h2.Driver
-    url: jdbc:h2:mem:numerologydb
-    userName: sa
-    password: p@$$w0rdnum3r0l0g1
-    console:
+  profiles:
+    active: prod
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info
+  info:
+    env:
       enabled: true
-      path: /h2-console
-  jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
-    hibernate:
-      ddl-auto: none
-  sql:
-    init:
-    mode: always
+
+info:
+  application:
+    name: Numerology Application
+    description: Provide and API for numerology
+    version: '@project.version@'

@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "53f56e22-0da7-4af1-9fa7-c69bfb9c7316",
-		"name": "application-numerology",
+		"_postman_id": "e9150094-4ba4-4796-9409-f6dc0cddc68f",
+		"name": "application-numerology-local",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "15871510"
 	},
@@ -12,6 +12,26 @@
 				{
 					"name": "destiny",
 					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "riv2698fHCNIGi2mSRsSS5kbBm2cunh2N35I5wxnR27X8Fi7peOKYrUXHspTMdjp",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -24,12 +44,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/v1/numerology/destiny",
-							"protocol": "http",
+							"raw": "{{LOCALHOST}}/v1/numerology/destiny",
 							"host": [
-								"localhost"
+								"{{LOCALHOST}}"
 							],
-							"port": "8080",
 							"path": [
 								"v1",
 								"numerology",
@@ -42,6 +60,21 @@
 				{
 					"name": "personality",
 					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "riv2698fHCNIGi2mSRsSS5kbBm2cunh2N35I5wxnR27X8Fi7peOKYrUXHspTMdjp",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -54,16 +87,13 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/numerology/v1/compute/personality",
-							"protocol": "http",
+							"raw": "{{LOCALHOST}}/v1/numerology/personality",
 							"host": [
-								"localhost"
+								"{{LOCALHOST}}"
 							],
-							"port": "8080",
 							"path": [
-								"numerology",
 								"v1",
-								"compute",
+								"numerology",
 								"personality"
 							]
 						}
@@ -73,6 +103,21 @@
 				{
 					"name": "attitude",
 					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "riv2698fHCNIGi2mSRsSS5kbBm2cunh2N35I5wxnR27X8Fi7peOKYrUXHspTMdjp",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -85,12 +130,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/v1/numerology/attitude",
-							"protocol": "http",
+							"raw": "{{LOCALHOST}}/v1/numerology/attitude",
 							"host": [
-								"localhost"
+								"{{LOCALHOST}}"
 							],
-							"port": "8080",
 							"path": [
 								"v1",
 								"numerology",
@@ -103,6 +146,21 @@
 				{
 					"name": "character",
 					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "riv2698fHCNIGi2mSRsSS5kbBm2cunh2N35I5wxnR27X8Fi7peOKYrUXHspTMdjp",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -115,12 +173,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/v1/numerology/character",
-							"protocol": "http",
+							"raw": "{{LOCALHOST}}/v1/numerology/character",
 							"host": [
-								"localhost"
+								"{{LOCALHOST}}"
 							],
-							"port": "8080",
 							"path": [
 								"v1",
 								"numerology",
@@ -133,6 +189,21 @@
 				{
 					"name": "soul-urge",
 					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "riv2698fHCNIGi2mSRsSS5kbBm2cunh2N35I5wxnR27X8Fi7peOKYrUXHspTMdjp",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -145,12 +216,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/v1/numerology/soul-urge",
-							"protocol": "http",
+							"raw": "{{LOCALHOST}}/v1/numerology/soul-urge",
 							"host": [
-								"localhost"
+								"{{LOCALHOST}}"
 							],
-							"port": "8080",
 							"path": [
 								"v1",
 								"numerology",
@@ -163,6 +232,21 @@
 				{
 					"name": "hidden-agenda",
 					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "riv2698fHCNIGi2mSRsSS5kbBm2cunh2N35I5wxnR27X8Fi7peOKYrUXHspTMdjp",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -175,12 +259,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/v1/numerology/hidden-agenda",
-							"protocol": "http",
+							"raw": "{{LOCALHOST}}/v1/numerology/hidden-agenda",
 							"host": [
-								"localhost"
+								"{{LOCALHOST}}"
 							],
-							"port": "8080",
 							"path": [
 								"v1",
 								"numerology",
@@ -193,6 +275,21 @@
 				{
 					"name": "divine-purpose",
 					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "riv2698fHCNIGi2mSRsSS5kbBm2cunh2N35I5wxnR27X8Fi7peOKYrUXHspTMdjp",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -205,12 +302,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/v1/numerology/divine-purpose",
-							"protocol": "http",
+							"raw": "{{LOCALHOST}}/v1/numerology/divine-purpose",
 							"host": [
-								"localhost"
+								"{{LOCALHOST}}"
 							],
-							"port": "8080",
 							"path": [
 								"v1",
 								"numerology",
@@ -223,6 +318,21 @@
 				{
 					"name": "personal-year",
 					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "riv2698fHCNIGi2mSRsSS5kbBm2cunh2N35I5wxnR27X8Fi7peOKYrUXHspTMdjp",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -235,12 +345,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/v1/numerology/personal-year",
-							"protocol": "http",
+							"raw": "{{LOCALHOST}}/v1/numerology/personal-year",
 							"host": [
-								"localhost"
+								"{{LOCALHOST}}"
 							],
-							"port": "8080",
 							"path": [
 								"v1",
 								"numerology",
@@ -253,6 +361,21 @@
 				{
 					"name": "divine-purpose",
 					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "riv2698fHCNIGi2mSRsSS5kbBm2cunh2N35I5wxnR27X8Fi7peOKYrUXHspTMdjp",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -265,12 +388,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/v1/numerology/divine-purpose",
-							"protocol": "http",
+							"raw": "{{LOCALHOST}}/v1/numerology/divine-purpose",
 							"host": [
-								"localhost"
+								"{{LOCALHOST}}"
 							],
-							"port": "8080",
 							"path": [
 								"v1",
 								"numerology",
@@ -283,6 +404,21 @@
 				{
 					"name": "love-compatibility",
 					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "riv2698fHCNIGi2mSRsSS5kbBm2cunh2N35I5wxnR27X8Fi7peOKYrUXHspTMdjp",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -295,12 +431,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/v1/numerology/love-compatibility",
-							"protocol": "http",
+							"raw": "{{LOCALHOST}}/v1/numerology/love-compatibility",
 							"host": [
-								"localhost"
+								"{{LOCALHOST}}"
 							],
-							"port": "8080",
 							"path": [
 								"v1",
 								"numerology",
@@ -313,6 +447,21 @@
 				{
 					"name": "final-result",
 					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "riv2698fHCNIGi2mSRsSS5kbBm2cunh2N35I5wxnR27X8Fi7peOKYrUXHspTMdjp",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -325,12 +474,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/v1/numerology/final-result",
-							"protocol": "http",
+							"raw": "{{LOCALHOST}}/v1/numerology/final-result",
 							"host": [
-								"localhost"
+								"{{LOCALHOST}}"
 							],
-							"port": "8080",
 							"path": [
 								"v1",
 								"numerology",
@@ -339,53 +486,160 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "descriptions",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "riv2698fHCNIGi2mSRsSS5kbBm2cunh2N35I5wxnR27X8Fi7peOKYrUXHspTMdjp",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCALHOST}}/v1/numerology/descriptions/en",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"v1",
+								"numerology",
+								"descriptions",
+								"en"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "description",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "riv2698fHCNIGi2mSRsSS5kbBm2cunh2N35I5wxnR27X8Fi7peOKYrUXHspTMdjp",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCALHOST}}/v1/numerology/description/destiny/en",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"v1",
+								"numerology",
+								"description",
+								"destiny",
+								"en"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
 		{
-			"name": "descriptions",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/v1/numerology/descriptions/en",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"v1",
-						"numerology",
-						"descriptions",
-						"en"
-					]
+			"name": "health",
+			"item": [
+				{
+					"name": "health",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "riv2698fHCNIGi2mSRsSS5kbBm2cunh2N35I5wxnR27X8Fi7peOKYrUXHspTMdjp",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCALHOST}}/actuator/health",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"actuator",
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "info",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "X-API-KEY",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "riv2698fHCNIGi2mSRsSS5kbBm2cunh2N35I5wxnR27X8Fi7peOKYrUXHspTMdjp",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCALHOST}}/actuator/info",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"actuator",
+								"info"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
-		},
-		{
-			"name": "description",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/v1/numerology/description/destiny/en",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"v1",
-						"numerology",
-						"description",
-						"destiny",
-						"en"
-					]
-				}
-			},
-			"response": []
+			]
 		}
 	]
 }

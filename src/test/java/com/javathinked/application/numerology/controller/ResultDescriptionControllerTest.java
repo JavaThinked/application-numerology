@@ -12,6 +12,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.security.test.context.support.WithMockUser;
 
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.is;
@@ -30,6 +31,7 @@ class ResultDescriptionControllerTest extends BaseControllerTest {
     private ResultDescription resultDescription;
 
     @Test
+    @WithMockUser
     void givenController_whenFindingResultDescriptionsByLanguage_thenReturnResultWithStatus_200() throws Exception {
         when(service.findResultDescriptionsByLanguage(anyString())).thenReturn(TestData.getSampleResultDescriptions());
 
@@ -44,6 +46,7 @@ class ResultDescriptionControllerTest extends BaseControllerTest {
     }
 
     @Test
+    @WithMockUser
     void givenController_whenFindingResultDescriptionsByLanguageWithBadParameters_thenReturnResultWithStatus_400() throws Exception {
         when(service.findResultDescriptionsByLanguage(anyString())).thenThrow(NumerologyCustomException.class);
 
@@ -57,6 +60,7 @@ class ResultDescriptionControllerTest extends BaseControllerTest {
     }
 
     @Test
+    @WithMockUser
     void givenController_whenFindingResultDescriptionsByLanguageAndResultNotFound_thenReturnResultWithStatus_404() throws Exception {
         when(service.findResultDescriptionsByLanguage(anyString())).thenThrow(NumerologyResultNotFoundException.class);
 
@@ -70,6 +74,7 @@ class ResultDescriptionControllerTest extends BaseControllerTest {
     }
 
     @Test
+    @WithMockUser
     void givenController_whenFindingResultDescriptionByCategoryAndLanguage_thenReturnResultWithStatus_200() throws Exception {
         when(service.findResultDescriptionsByLanguage(anyString())).thenReturn(TestData.getSampleResultDescriptions());
 
@@ -84,6 +89,7 @@ class ResultDescriptionControllerTest extends BaseControllerTest {
     }
 
     @Test
+    @WithMockUser
     void givenController_whenFindingResultDescriptionByCategoryAndLanguageWithBadParameters_thenReturnResultWithStatus_400() throws Exception {
         when(service.findResultDescriptionByCategoryAndLanguage(anyString(), anyString())).thenThrow(NumerologyCustomException.class);
 
@@ -97,6 +103,7 @@ class ResultDescriptionControllerTest extends BaseControllerTest {
     }
 
     @Test
+    @WithMockUser
     void givenController_whenFindingResultDescriptionByCategoryAndLanguageAndResultNotFound_thenReturnResultWithStatus_404() throws Exception {
         when(service.findResultDescriptionByCategoryAndLanguage(anyString(), anyString())).thenThrow(NumerologyResultNotFoundException.class);
 
