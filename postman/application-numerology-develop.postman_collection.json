@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "e9150094-4ba4-4796-9409-f6dc0cddc68f",
-		"name": "application-numerology-local",
+		"name": "application-numerology-develop",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "15871510"
 	},
@@ -423,7 +423,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[{\r\n    \"firstName\": \"JOHN\",\r\n    \"lastName\": \"DOE\",\r\n    \"day\": 3,\r\n    \"month\": 9,\r\n    \"year\": 1997,\r\n    \"phoneNumber\": \"460-555-4020\",\r\n    \"email\": \"emmanuel.email@mail.com\",\r\n    \"language\": \"en\"\r\n},\r\n{\r\n    \"firstName\": \"JEANNE\",\r\n    \"lastName\": \"DOEN\",\r\n    \"day\": 22,\r\n    \"month\": 7,\r\n    \"year\": 1994,\r\n    \"phoneNumber\": \"460-888-8545\",\r\n    \"email\": \"raissa.email@mail.com\",\r\n    \"language\": \"en\"\r\n}]",
+							"raw": "[{\r\n    \"firstName\": \"JOHN\",\r\n    \"lastName\": \"DOE\",\r\n    \"day\": 10,\r\n    \"month\": 9,\r\n    \"year\": 1998,\r\n    \"phoneNumber\": \"460-555-4020\",\r\n    \"email\": \"john.email@mail.com\",\r\n    \"language\": \"en\"\r\n},\r\n{\r\n    \"firstName\": \"JEANNE\",\r\n    \"lastName\": \"DOEN\",\r\n    \"day\": 20,\r\n    \"month\": 6,\r\n    \"year\": 1988,\r\n    \"phoneNumber\": \"460-888-8545\",\r\n    \"email\": \"jeanne.email@mail.com\",\r\n    \"language\": \"en\"\r\n}]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -561,7 +561,7 @@
 			]
 		},
 		{
-			"name": "health",
+			"name": "actuator",
 			"item": [
 				{
 					"name": "health",

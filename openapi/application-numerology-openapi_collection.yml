@@ -1,0 +1,339 @@
+openapi: 3.0.0
+info:
+  title: application-numerology-develop
+  version: 1.0.0
+servers:
+  - url: http://{{localhost}}
+components:
+  securitySchemes:
+    apikeyAuth:
+      type: http
+      scheme: apikey
+tags:
+  - name: core
+  - name: actuator
+paths:
+  /v1/numerology/destiny:
+    post:
+      tags:
+        - core
+      summary: destiny
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                firstName: JOHN
+                lastName: DOE
+                day: 3
+                month: 9
+                year: 1997
+                phoneNumber: 460-555-4020
+                email: john.doe@mail.com
+                language: en
+      security:
+        - apikeyAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/numerology/personality:
+    post:
+      tags:
+        - core
+      summary: personality
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                firstName: JOHN
+                lastName: DOE
+                day: 3
+                month: 9
+                year: 1997
+                phoneNumber: 460-555-4020
+                email: john.doe@mail.com
+                language: en
+      security:
+        - apikeyAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/numerology/attitude:
+    post:
+      tags:
+        - core
+      summary: attitude
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                firstName: JOHN
+                lastName: DOE
+                day: 3
+                month: 9
+                year: 1997
+                phoneNumber: 460-555-4020
+                email: john.doe@mail.com
+                language: en
+      security:
+        - apikeyAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/numerology/character:
+    post:
+      tags:
+        - core
+      summary: character
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                firstName: JOHN
+                lastName: DOE
+                day: 3
+                month: 9
+                year: 1997
+                phoneNumber: 460-555-4020
+                email: john.doe@mail.com
+                language: en
+      security:
+        - apikeyAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/numerology/soul-urge:
+    post:
+      tags:
+        - core
+      summary: soul-urge
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                firstName: JOHN
+                lastName: DOE
+                day: 3
+                month: 9
+                year: 1997
+                phoneNumber: 460-555-4020
+                email: john.doe@mail.com
+                language: en
+      security:
+        - apikeyAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/numerology/hidden-agenda:
+    post:
+      tags:
+        - core
+      summary: hidden-agenda
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                firstName: JOHN
+                lastName: DOE
+                day: 3
+                month: 9
+                year: 1997
+                phoneNumber: 460-555-4020
+                email: john.doe@mail.com
+                language: en
+      security:
+        - apikeyAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/numerology/divine-purpose:
+    post:
+      tags:
+        - core
+      summary: divine-purpose
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                firstName: JOHN
+                lastName: DOE
+                day: 3
+                month: 9
+                year: 1997
+                phoneNumber: 460-555-4020
+                email: john.doe@mail.com
+                language: en
+      security:
+        - apikeyAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/numerology/personal-year:
+    post:
+      tags:
+        - core
+      summary: personal-year
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                firstName: JOHN
+                lastName: DOE
+                day: 3
+                month: 9
+                year: 1997
+                phoneNumber: 460-555-4020
+                email: john.doe@mail.com
+                language: en
+      security:
+        - apikeyAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/numerology/love-compatibility:
+    post:
+      tags:
+        - core
+      summary: love-compatibility
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                - firstName: JOHN
+                  lastName: DOE
+                  day: 10
+                  month: 9
+                  year: 1998
+                  phoneNumber: 460-555-4020
+                  email: john.email@mail.com
+                  language: en
+                - firstName: JEANNE
+                  lastName: DOEN
+                  day: 20
+                  month: 6
+                  year: 1988
+                  phoneNumber: 460-888-8545
+                  email: jeanne.email@mail.com
+                  language: en
+      security:
+        - apikeyAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/numerology/final-result:
+    post:
+      tags:
+        - core
+      summary: final-result
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                - firstName: JOHN
+                  lastName: DOE
+                  day: 3
+                  month: 9
+                  year: 1997
+                  phoneNumber: 460-555-4020
+                  email: emmanuel.email@mail.com
+                  language: en
+                - firstName: JEANNE
+                  lastName: DOEN
+                  day: 22
+                  month: 7
+                  year: 1994
+                  phoneNumber: 460-888-8545
+                  email: raissa.email@mail.com
+                  language: en
+      security:
+        - apikeyAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/numerology/descriptions/en:
+    get:
+      tags:
+        - core
+      summary: descriptions
+      security:
+        - apikeyAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/numerology/description/destiny/en:
+    get:
+      tags:
+        - core
+      summary: description
+      security:
+        - apikeyAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /actuator/health:
+    get:
+      tags:
+        - actuator
+      summary: health
+      security:
+        - apikeyAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /actuator/info:
+    get:
+      tags:
+        - actuator
+      summary: info
+      security:
+        - apikeyAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
