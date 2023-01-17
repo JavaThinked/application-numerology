@@ -13,6 +13,6 @@ management:
 
 info:
   application:
-    name: Numerology Application
-    description: Provide and API for numerology
+    name: '@project.name@'
+    description: '@project.description@'
     version: '@project.version@'
