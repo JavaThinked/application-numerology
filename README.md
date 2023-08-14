@@ -18,7 +18,8 @@ The goal of this project is to develop an API to provide numerology calculation,
 ## Architecture
 The API is free and hosted on Heroku and published on Rapid API: https://rapidapi.com/javathinked/api/numerology-api4/
 
-![Numerology-Architecture](https://github.com/JavaThinked/application-numerology/assets/59421318/1260b35b-8e8d-4b7e-9d4b-16b3ba1eec01)
+![Numerology-Architecture](https://github.com/JavaThinked/application-numerology/assets/59421318/0095c38f-c1ae-46cf-96d9-0ab953106c9d)
+
 
 
 
