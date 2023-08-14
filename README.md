@@ -16,7 +16,7 @@ The goal of this project is to develop an API to provide numerology calculation,
 9. Love compatibility = sum of the first names of the two spouses
 
 ## Architecture
-The API is free and hosted on Heroku and published on Rapid API
+The API is free and hosted on Heroku and published on Rapid API: https://rapidapi.com/javathinked/api/numerology-api4/
 
 ![Numerology-Architecture](https://github.com/JavaThinked/application-numerology/assets/59421318/1260b35b-8e8d-4b7e-9d4b-16b3ba1eec01)
 
